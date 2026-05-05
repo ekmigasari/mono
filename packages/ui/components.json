@@ -1,0 +1,23 @@
+{
+	"$schema": "https://ui.shadcn.com/schema.json",
+	"style": "base-maia",
+	"rsc": false,
+	"tsx": true,
+	"tailwind": {
+		"config": "",
+		"css": "src/styles/globals.css",
+		"baseColor": "neutral",
+		"cssVariables": true
+	},
+	"iconLibrary": "phosphor",
+	"aliases": {
+		"components": "@dazzboard/ui/components",
+		"utils": "@dazzboard/ui/lib/utils",
+		"hooks": "@dazzboard/ui/hooks",
+		"lib": "@dazzboard/ui/lib",
+		"ui": "@dazzboard/ui/components"
+	},
+	"rtl": false,
+	"menuColor": "default",
+	"menuAccent": "subtle"
+}

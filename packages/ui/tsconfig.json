@@ -40,6 +40,12 @@
 		"isolatedModules": true,
 		"noUncheckedSideEffectImports": true,
 		"moduleDetection": "force",
-		"skipLibCheck": true
-	}
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@dazzboard/ui/*": ["./src/*"]
+		}
+	},
+	"include": ["."],
+	"exclude": ["node_modules", "dist"]
 }
