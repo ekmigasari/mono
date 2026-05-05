@@ -1,48 +1,17 @@
-node_modules
+# Dependencies
+node_modules/
+.pnpm-store/
 
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
+# Build outputs
 dist
 dist-ssr
-*.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# dev
-.yarn/
-!.yarn/releases
-.vscode/*
-!.vscode/launch.json
-!.vscode/*.code-snippets
-.idea/workspace.xml
-.idea/usage.statistics.xml
-.idea/shelf
-
-# deps
-node_modules/
-
-# env
+# Environment
 .env
 .env.production
+*.local
 
-# logs
+# Logs
 logs/
 *.log
 npm-debug.log*
@@ -51,7 +20,25 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# misc
-.DS_Store
+# Editor / IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/*.code-snippets
+.idea
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
+# Package manager
+.yarn/
+!.yarn/releases
+
+# OS / generated
+.DS_Store
 **/generated/prisma
