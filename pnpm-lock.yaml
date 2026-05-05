@@ -113,6 +113,9 @@ importers:
 
   apps/platform:
     dependencies:
+      '@dazzboard/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       dotenv:
         specifier: ^17.4.2
         version: 17.4.2
@@ -171,6 +174,25 @@ importers:
       vite:
         specifier: ^8.0.10
         version: 8.0.10(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(tsx@4.21.0)
+
+  packages/ui:
+    dependencies:
+      react:
+        specifier: ^19.2.5
+        version: 19.2.5
+      react-dom:
+        specifier: ^19.2.5
+        version: 19.2.5(react@19.2.5)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.14)
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
 
 packages:
 

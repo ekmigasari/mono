@@ -11,6 +11,7 @@
 		"with-env": "dotenv -e ../../.env --"
 	},
 	"dependencies": {
+		"@dazzboard/ui": "workspace:*",
 		"dotenv": "^17.4.2",
 		"react": "^19.2.5",
 		"react-dom": "^19.2.5"
