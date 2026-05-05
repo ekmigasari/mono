@@ -1,0 +1,26 @@
+{
+	"name": "mono-dazzboard",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"admin:dev": "pnpm --filter admin dev",
+		"api:dev": "pnpm --filter api dev",
+		"platform:dev": "pnpm --filter platform dev",
+		"dev": "pnpm --parallel --filter=admin -filter=api -filter=platform run dev",
+		"lint": "pnpm exec biome check",
+		"lint:fix": "pnpm exec biome check --write --unsafe",
+		"prepare": "husky"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.33.3",
+	"devDependencies": {
+		"@biomejs/biome": "2.4.14",
+		"husky": "^9.1.7"
+	},
+	"dependencies": {
+		"dotenv-cli": "^11.0.0"
+	}
+}
