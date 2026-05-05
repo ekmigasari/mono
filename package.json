@@ -7,7 +7,8 @@
 		"admin:dev": "pnpm --filter admin dev",
 		"api:dev": "pnpm --filter api dev",
 		"platform:dev": "pnpm --filter platform dev",
-		"dev": "pnpm --parallel --filter=admin -filter=api -filter=platform run dev",
+		"ui:dev": "pnpm --filter=@dazzboard/ui dev",
+		"dev": "pnpm --parallel --filter=admin -filter=api -filter=platform --filter=@dazzboard/ui run dev",
 		"lint": "pnpm exec biome check",
 		"lint:fix": "pnpm exec biome check --write --unsafe",
 		"prepare": "husky"
