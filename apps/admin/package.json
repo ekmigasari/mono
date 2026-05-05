@@ -11,6 +11,7 @@
 		"with-env": "dotenv -e ../../.env --"
 	},
 	"dependencies": {
+		"@dazzboard/ui": "workspace:*",
 		"@tanstack/react-query": "^5.100.9",
 		"dotenv": "^17.4.2",
 		"react": "^19.2.5",

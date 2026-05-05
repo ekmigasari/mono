@@ -1,9 +1,8 @@
+import { Test } from "@dazzboard/ui";
 import { useState } from "react";
 import heroImg from "./assets/hero.png";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
-import "./App.css";
-import { Test } from "@dazzboard/ui";
 
 // import { exampleFunction } from "@organization/package-name";
 
