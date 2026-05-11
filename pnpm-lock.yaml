@@ -91,6 +91,9 @@ importers:
       '@monorepo/db':
         specifier: workspace:*
         version: link:../../packages/db
+      '@monorepo/logger':
+        specifier: workspace:*
+        version: link:../../packages/logger
       '@monorepo/types':
         specifier: workspace:*
         version: link:../../packages/types
