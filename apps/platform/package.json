@@ -15,8 +15,10 @@
 		"@phosphor-icons/react": "^2.1.10",
 		"@tanstack/react-query": "^5.100.9",
 		"dotenv": "^17.4.2",
+		"i18next": "^26.1.0",
 		"react": "^19.2.5",
 		"react-dom": "^19.2.5",
+		"react-i18next": "^17.0.7",
 		"react-router": "^7.15.0"
 	},
 	"devDependencies": {

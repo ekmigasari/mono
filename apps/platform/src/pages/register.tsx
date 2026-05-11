@@ -11,9 +11,12 @@ import { Input } from "@monorepo/ui/components/input";
 import { Label } from "@monorepo/ui/components/label";
 import { GoogleLogo, Spinner } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link, Navigate, useNavigate } from "react-router";
+import { LanguageSwitcher } from "../components/language-switcher";
 
 export function RegisterPage() {
+	const { t } = useTranslation();
 	const navigate = useNavigate();
 	const { data: session, isPending: sessionPending } = authClient.useSession();
 	const [error, setError] = useState("");
@@ -45,13 +48,13 @@ export function RegisterPage() {
 		const password = passwordRef.current?.value;
 		const confirmPassword = confirmPasswordRef.current?.value;
 		if (!name || !email || !password || !confirmPassword) {
-			setError("Please fill in all fields");
+			setError(t("auth.errors.fillAllFields"));
 			setLoading(false);
 			return;
 		}
 
 		if (password !== confirmPassword) {
-			setError("Passwords do not match");
+			setError(t("auth.errors.passwordsDoNotMatch"));
 			setLoading(false);
 			return;
 		}
@@ -66,7 +69,7 @@ export function RegisterPage() {
 			setError(
 				signUpError.message ||
 					signUpError.statusText ||
-					"Failed to create account",
+					t("auth.errors.failedToCreateAccount"),
 			);
 			setLoading(false);
 			return;
@@ -84,19 +87,20 @@ export function RegisterPage() {
 
 	return (
 		<div className="flex min-h-svh items-center justify-center p-4">
+			<LanguageSwitcher />
 			<Card className="w-full max-w-sm">
 				<CardHeader className="text-center">
-					<CardTitle className="text-xl">Create an account</CardTitle>
-					<CardDescription>Join Dazzboard today</CardDescription>
+					<CardTitle className="text-xl">{t("auth.createAccount")}</CardTitle>
+					<CardDescription>{t("auth.joinDazzboard")}</CardDescription>
 				</CardHeader>
 				<CardContent>
 					<form onSubmit={handleEmailSignUp} className="space-y-4">
 						<div className="space-y-2">
-							<Label htmlFor="name">Name</Label>
+							<Label htmlFor="name">{t("auth.name")}</Label>
 							<Input id="name" ref={nameRef} placeholder="John Doe" required />
 						</div>
 						<div className="space-y-2">
-							<Label htmlFor="email">Email</Label>
+							<Label htmlFor="email">{t("auth.email")}</Label>
 							<Input
 								id="email"
 								type="email"
@@ -106,7 +110,7 @@ export function RegisterPage() {
 							/>
 						</div>
 						<div className="space-y-2">
-							<Label htmlFor="password">Password</Label>
+							<Label htmlFor="password">{t("auth.password")}</Label>
 							<Input
 								id="password"
 								type="password"
@@ -117,7 +121,9 @@ export function RegisterPage() {
 							/>
 						</div>
 						<div className="space-y-2">
-							<Label htmlFor="confirmPassword">Confirm password</Label>
+							<Label htmlFor="confirmPassword">
+								{t("auth.confirmPassword")}
+							</Label>
 							<Input
 								id="confirmPassword"
 								type="password"
@@ -130,7 +136,7 @@ export function RegisterPage() {
 						{error && <p className="text-destructive text-sm">{error}</p>}
 						<Button type="submit" disabled={loading} className="w-full">
 							{loading && <Spinner className="size-4 animate-spin" />}
-							Create account
+							{t("auth.createAccount")}
 						</Button>
 					</form>
 					<div className="relative my-4">
@@ -139,7 +145,7 @@ export function RegisterPage() {
 						</div>
 						<div className="relative flex justify-center text-xs uppercase">
 							<span className="bg-card text-muted-foreground px-2">
-								Or continue with
+								{t("auth.orContinueWith")}
 							</span>
 						</div>
 					</div>
@@ -149,15 +155,15 @@ export function RegisterPage() {
 						onClick={handleGoogleSignUp}
 					>
 						<GoogleLogo className="size-4" />
-						Google
+						{t("auth.google")}
 					</Button>
 					<p className="text-muted-foreground mt-4 text-center text-sm">
-						Already have an account?{" "}
+						{t("auth.alreadyHaveAccount")}{" "}
 						<Link
 							to="/login"
 							className="text-foreground underline underline-offset-4 hover:no-underline"
 						>
-							Sign in
+							{t("auth.signIn")}
 						</Link>
 					</p>
 				</CardContent>

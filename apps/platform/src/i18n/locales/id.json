@@ -1,0 +1,26 @@
+{
+	"auth": {
+		"signIn": "Masuk",
+		"signUp": "Daftar",
+		"signOut": "Keluar",
+		"welcomeBack": "Selamat datang kembali di Dazzboard",
+		"createAccount": "Buat akun",
+		"joinDazzboard": "Gabung Dazzboard hari ini",
+		"email": "Surel",
+		"password": "Kata sandi",
+		"confirmPassword": "Konfirmasi kata sandi",
+		"name": "Nama",
+		"forgotPassword": "Lupa kata sandi?",
+		"orContinueWith": "Atau lanjutkan dengan",
+		"google": "Google",
+		"dontHaveAccount": "Belum punya akun?",
+		"alreadyHaveAccount": "Sudah punya akun?",
+		"loading": "Memuat...",
+		"errors": {
+			"fillAllFields": "Harap isi semua bidang",
+			"passwordsDoNotMatch": "Kata sandi tidak cocok",
+			"invalidCredentials": "Surel atau kata sandi salah",
+			"failedToCreateAccount": "Gagal membuat akun"
+		}
+	}
+}

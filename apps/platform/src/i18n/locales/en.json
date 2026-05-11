@@ -1,0 +1,26 @@
+{
+	"auth": {
+		"signIn": "Sign in",
+		"signUp": "Sign up",
+		"signOut": "Sign out",
+		"welcomeBack": "Welcome back to Dazzboard",
+		"createAccount": "Create an account",
+		"joinDazzboard": "Join Dazzboard today",
+		"email": "Email",
+		"password": "Password",
+		"confirmPassword": "Confirm password",
+		"name": "Name",
+		"forgotPassword": "Forgot password?",
+		"orContinueWith": "Or continue with",
+		"google": "Google",
+		"dontHaveAccount": "Don't have an account?",
+		"alreadyHaveAccount": "Already have an account?",
+		"loading": "Loading...",
+		"errors": {
+			"fillAllFields": "Please fill in all fields",
+			"passwordsDoNotMatch": "Passwords do not match",
+			"invalidCredentials": "Invalid email or password",
+			"failedToCreateAccount": "Failed to create account"
+		}
+	}
+}
