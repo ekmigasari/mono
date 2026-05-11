@@ -1,0 +1,27 @@
+{
+	"name": "@monorepo/subscription",
+	"version": "0.1.0",
+	"description": "Provider-agnostic subscription management (Polar, Stripe, etc.)",
+	"type": "module",
+	"main": "index.js",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.33.3",
+	"devDependencies": {
+		"@types/node": "^25.6.2",
+		"typescript": "^6.0.3"
+	},
+	"dependencies": {
+		"@monorepo/db": "workspace:*",
+		"@monorepo/logger": "workspace:*",
+		"@monorepo/types": "workspace:*",
+		"zod": "^3.25.76"
+	}
+}

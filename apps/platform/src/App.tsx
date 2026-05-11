@@ -4,6 +4,7 @@ import { AuthGuard } from "./components/auth-guard";
 import { DashboardPage } from "./pages/dashboard";
 import { ForgotPasswordPage } from "./pages/forgot-password";
 import { LoginPage } from "./pages/login";
+import { PlansPage } from "./pages/plans";
 import { RegisterPage } from "./pages/register";
 import { ResetPasswordPage } from "./pages/reset-password";
 
@@ -32,6 +33,7 @@ export function App() {
 				<Route path="/" element={<RootRedirect />} />
 				<Route element={<AuthGuard />}>
 					<Route path="/dashboard" element={<DashboardPage />} />
+					<Route path="/plans" element={<PlansPage />} />
 				</Route>
 				<Route path="*" element={<Navigate to="/login" replace />} />
 			</Routes>

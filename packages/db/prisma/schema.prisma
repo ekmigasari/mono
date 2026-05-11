@@ -18,6 +18,7 @@ model User {
 
 	sessions Session[]
 	accounts Account[]
+	subscriptions Subscription[]
 }
 
 model Session {
@@ -58,4 +59,26 @@ model Verification {
 	expiresAt  DateTime
 	createdAt  DateTime @default(now())
 	updatedAt  DateTime @updatedAt
+}
+
+model Subscription {
+	id                      String   @id @default(cuid())
+	userId                  String
+	planId                  String
+	status                  String   @default("incomplete")
+	currentPeriodStart      DateTime
+	currentPeriodEnd        DateTime
+	cancelAtPeriodEnd       Boolean  @default(false)
+	provider                String
+	providerSubscriptionId  String   @default("")
+	providerCustomerId      String?
+	metadata                Json     @default("{}")
+	trialEnd                DateTime?
+	createdAt               DateTime @default(now())
+	updatedAt               DateTime @updatedAt
+
+	user User @relation(references: [id], fields: [userId], onDelete: Cascade)
+
+	@@unique([userId, provider])
+	@@index([providerSubscriptionId])
 }
