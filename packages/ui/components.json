@@ -11,11 +11,11 @@
 	},
 	"iconLibrary": "phosphor",
 	"aliases": {
-		"components": "@dazzboard/ui/components",
-		"utils": "@dazzboard/ui/lib/utils",
-		"hooks": "@dazzboard/ui/hooks",
-		"lib": "@dazzboard/ui/lib",
-		"ui": "@dazzboard/ui/components"
+		"components": "@monorepo/ui/components",
+		"utils": "@monorepo/ui/lib/utils",
+		"hooks": "@monorepo/ui/hooks",
+		"lib": "@monorepo/ui/lib",
+		"ui": "@monorepo/ui/components"
 	},
 	"rtl": false,
 	"menuColor": "default",

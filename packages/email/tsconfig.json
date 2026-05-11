@@ -10,11 +10,8 @@
 		"module": "preserve",
 		"moduleResolution": "bundler",
 		"target": "esnext",
-		"types": [],
-		// For nodejs:
-		// "lib": ["esnext"],
-		// "types": ["node"],
-		// and npm install -D @types/node
+		"types": ["node"],
+		"lib": ["esnext"],
 
 		// Other Outputs
 		"sourceMap": true,
@@ -40,12 +37,6 @@
 		"isolatedModules": true,
 		"noUncheckedSideEffectImports": true,
 		"moduleDetection": "force",
-		"skipLibCheck": true,
-		"baseUrl": ".",
-		"paths": {
-			"@monorepo/ui/*": ["./src/*"]
-		}
-	},
-	"include": ["."],
-	"exclude": ["node_modules", "dist"]
+		"skipLibCheck": true
+	}
 }

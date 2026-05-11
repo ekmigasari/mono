@@ -1,4 +1,4 @@
-import { Button } from "@dazzboard/ui/components/button";
+import { Button } from "@monorepo/ui/components/button";
 
 export function App() {
 	return (

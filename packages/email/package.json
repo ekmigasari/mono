@@ -1,5 +1,5 @@
 {
-	"name": "@monorepo/package-name",
+	"name": "@monorepo/email",
 	"version": "0.1.0",
 	"description": "",
 	"type": "module",
@@ -15,12 +15,15 @@
 	"license": "ISC",
 	"packageManager": "pnpm@10.33.3",
 	"devDependencies": {
+		"@types/node": "^25.6.2",
 		"typescript": "^6.0.3"
 	},
 	"dependencies": {
+		"@react-email/components": "^1.0.12",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
 		"react": "^19.2.5",
-		"react-dom": "^19.2.5"
+		"react-dom": "^19.2.5",
+		"resend": "^6.12.3"
 	}
 }

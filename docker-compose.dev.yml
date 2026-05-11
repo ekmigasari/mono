@@ -8,7 +8,7 @@ services:
     ports:
       - 5440:5432
     volumes:
-      - dazzboard_data:/var/lib/postgresql/data
+      - monorepo_data:/var/lib/postgresql/data
 
 volumes:
   db_data:
