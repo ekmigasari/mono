@@ -91,9 +91,18 @@ importers:
       '@monorepo/db':
         specifier: workspace:*
         version: link:../../packages/db
+      '@monorepo/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       hono:
         specifier: ^4.12.16
         version: 4.12.16
+      react:
+        specifier: ^19.2.5
+        version: 19.2.5
+      react-dom:
+        specifier: ^19.2.5
+        version: 19.2.5(react@19.2.5)
     devDependencies:
       '@types/node':
         specifier: ^20.11.17
@@ -113,12 +122,12 @@ importers:
       '@monorepo/auth':
         specifier: workspace:*
         version: link:../../packages/auth
-      '@monorepo/package-name':
-        specifier: workspace:*
-        version: link:../../packages/package-template
       '@monorepo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@phosphor-icons/react':
+        specifier: ^2.1.10
+        version: 2.1.10(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@tanstack/react-query':
         specifier: ^5.100.9
         version: 5.100.9(react@19.2.5)
@@ -177,16 +186,31 @@ importers:
       '@monorepo/db':
         specifier: workspace:*
         version: link:../db
+      '@monorepo/email':
+        specifier: workspace:*
+        version: link:../email
+      '@monorepo/types':
+        specifier: workspace:*
+        version: link:../types
       better-auth:
         specifier: ^1.6.10
         version: 1.6.10(@prisma/client@7.8.0(prisma@7.8.0(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@6.0.3))(typescript@6.0.3))(mysql2@3.15.3)(pg@8.20.0)(prisma@7.8.0(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+      react:
+        specifier: ^19.2.5
+        version: 19.2.5
     devDependencies:
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
 
   packages/db:
     dependencies:
+      '@monorepo/types':
+        specifier: workspace:*
+        version: link:../types
       '@prisma/adapter-pg':
         specifier: ^7.8.0
         version: 7.8.0
@@ -212,6 +236,9 @@ importers:
 
   packages/email:
     dependencies:
+      '@monorepo/types':
+        specifier: workspace:*
+        version: link:../types
       '@react-email/components':
         specifier: ^1.0.12
         version: 1.0.12(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -240,6 +267,9 @@ importers:
 
   packages/logger:
     dependencies:
+      '@monorepo/types':
+        specifier: workspace:*
+        version: link:../types
       pino:
         specifier: ^10.3.1
         version: 10.3.1
@@ -269,6 +299,19 @@ importers:
         specifier: ^19.2.5
         version: 19.2.5(react@19.2.5)
     devDependencies:
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+
+  packages/types:
+    dependencies:
+      zod:
+        specifier: ^3.25.76
+        version: 3.25.76
+    devDependencies:
+      '@types/node':
+        specifier: ^25.6.2
+        version: 25.6.2
       typescript:
         specifier: ^6.0.3
         version: 6.0.3

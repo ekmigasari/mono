@@ -11,7 +11,10 @@
 		"@hono/node-server": "^1.19.14",
 		"@monorepo/auth": "workspace:*",
 		"@monorepo/db": "workspace:*",
-		"hono": "^4.12.16"
+		"@monorepo/types": "workspace:*",
+		"hono": "^4.12.16",
+		"react": "^19.2.5",
+		"react-dom": "^19.2.5"
 	},
 	"devDependencies": {
 		"@types/node": "^20.11.17",

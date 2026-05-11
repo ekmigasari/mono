@@ -17,11 +17,15 @@
 	"license": "ISC",
 	"packageManager": "pnpm@10.33.3",
 	"devDependencies": {
+		"@types/react": "^19.2.14",
 		"typescript": "^6.0.3"
 	},
 	"dependencies": {
 		"@better-auth/prisma-adapter": "^1.6.10",
 		"@monorepo/db": "workspace:*",
-		"better-auth": "^1.6.10"
+		"@monorepo/email": "workspace:*",
+		"@monorepo/types": "workspace:*",
+		"better-auth": "^1.6.10",
+		"react": "^19.2.5"
 	}
 }

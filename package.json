@@ -12,7 +12,7 @@
 		"db:migrate": "pnpm --filter=@monorepo/db db:migrate",
 		"db:studio": "pnpm --filter=@monorepo/db db:studio",
 		"db:push": "pnpm --filter=@monorepo/db db:push",
-		"dev": "pnpm --parallel --filter=admin -filter=api -filter=platform --filter=@monorepo/ui run dev",
+		"dev": "pnpm --parallel --filter=admin --filter=api --filter=platform run dev",
 		"lint": "pnpm exec biome check",
 		"lint:fix": "pnpm exec biome check --write --unsafe",
 		"prepare": "husky"

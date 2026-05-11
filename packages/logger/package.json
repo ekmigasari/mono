@@ -19,6 +19,7 @@
 		"typescript": "^6.0.3"
 	},
 	"dependencies": {
+		"@monorepo/types": "workspace:*",
 		"pino": "^10.3.1",
 		"pino-pretty": "^13.1.3"
 	}

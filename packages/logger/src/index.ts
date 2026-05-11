@@ -1,10 +1,9 @@
+import { env } from "@monorepo/types/server";
 import pino from "pino";
 
-const level = process.env.LOG_LEVEL ?? "info";
-
 const logger = pino({
-	level,
-	...((process.env.NODE_ENV === "development" || !process.env.NODE_ENV) && {
+	level: env.LOG_LEVEL,
+	...(env.NODE_ENV === "development" && {
 		transport: {
 			target: "pino-pretty",
 			options: {
@@ -16,4 +15,4 @@ const logger = pino({
 });
 
 export default logger;
-export { logError, logErrorAndThrow } from "./error.ts";
+export { logError, logErrorAndThrow } from "./error.js";

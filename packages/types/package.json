@@ -1,11 +1,12 @@
 {
-	"name": "@monorepo/email",
+	"name": "@monorepo/types",
 	"version": "0.1.0",
-	"description": "",
+	"description": "Shared types, schemas, and validators",
 	"type": "module",
 	"main": "index.js",
 	"exports": {
-		".": "./src/index.ts"
+		".": "./src/index.ts",
+		"./server": "./src/server.ts"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -14,17 +15,11 @@
 	"author": "",
 	"license": "ISC",
 	"packageManager": "pnpm@10.33.3",
+	"dependencies": {
+		"zod": "^3.25.76"
+	},
 	"devDependencies": {
 		"@types/node": "^25.6.2",
 		"typescript": "^6.0.3"
-	},
-	"dependencies": {
-		"@monorepo/types": "workspace:*",
-		"@react-email/components": "^1.0.12",
-		"@types/react": "^19.2.14",
-		"@types/react-dom": "^19.2.3",
-		"react": "^19.2.5",
-		"react-dom": "^19.2.5",
-		"resend": "^6.12.3"
 	}
 }

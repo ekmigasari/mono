@@ -1,5 +1,6 @@
 import { serve } from "@hono/node-server";
 import { auth } from "@monorepo/auth/server";
+import { env } from "@monorepo/types/server";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 
@@ -8,7 +9,11 @@ const app = new Hono();
 app.use(
 	"/api/auth/*",
 	cors({
-		origin: ["http://localhost:5173", "http://localhost:5174"],
+		origin: [
+			"http://localhost:3000",
+			"http://localhost:4000",
+			env.VITE_APP_URL,
+		],
 		allowHeaders: ["Content-Type", "Authorization"],
 		allowMethods: ["POST", "GET", "OPTIONS"],
 		exposeHeaders: ["Content-Length"],

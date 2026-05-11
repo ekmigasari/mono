@@ -2,11 +2,11 @@ services:
   db:
     image: postgres:17
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
+      POSTGRES_USER: dazzboard_user
+      POSTGRES_PASSWORD: asdf1234
+      POSTGRES_DB: dazzboarddb
     ports:
-      - 5440:5432
+      - 5432:5432
     volumes:
       - monorepo_data:/var/lib/postgresql/data
 

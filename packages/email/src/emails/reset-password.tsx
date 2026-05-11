@@ -14,20 +14,20 @@ import {
 	Text,
 } from "@react-email/components";
 
-interface WelcomeEmailProps {
+interface ResetPasswordEmailProps {
 	username: string;
-	verificationLink: string;
+	resetLink: string;
 }
 
 const baseUrl = env.VITE_APP_URL
 	? `https://${env.VITE_APP_URL}`
 	: "http://app.dazzboard.co";
 
-export const WelcomeEmail = ({
+export const ResetPasswordEmail = ({
 	username = "there",
-	verificationLink = "https://example.com/verify",
-}: WelcomeEmailProps) => {
-	const previewText = `Welcome to Dazzboard, ${username}!`;
+	resetLink = "https://example.com/reset",
+}: ResetPasswordEmailProps) => {
+	const previewText = `Reset your Dazzboard password, ${username}!`;
 
 	return (
 		<Html>
@@ -42,25 +42,29 @@ export const WelcomeEmail = ({
 						height={48}
 						style={logo}
 					/>
-					<Heading style={heading}>Welcome to Dazzboard, {username}!</Heading>
+					<Heading style={heading}>Reset your password</Heading>
+					<Text style={paragraph}>Hi {username},</Text>
 					<Text style={paragraph}>
-						We're excited to have you on board. Please verify your email address
-						to get started.
+						Someone requested a password reset for your Dazzboard account. Click
+						the button below to set a new password.
 					</Text>
 					<Section style={btnContainer}>
-						<Button style={button} href={verificationLink}>
-							Verify Email
+						<Button style={button} href={resetLink}>
+							Reset Password
 						</Button>
 					</Section>
 					<Text style={paragraph}>
 						Or copy and paste this link into your browser:
 					</Text>
-					<Link style={link} href={verificationLink}>
-						{verificationLink}
+					<Link style={link} href={resetLink}>
+						{resetLink}
 					</Link>
+					<Text style={paragraph}>
+						If you didn't request this, you can safely ignore this email.
+					</Text>
 					<Hr style={hr} />
 					<Text style={footer}>
-						If you didn't create an account, you can safely ignore this email.
+						If you didn't request a password reset, no further action is needed.
 					</Text>
 				</Container>
 			</Body>
